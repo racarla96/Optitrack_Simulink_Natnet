@@ -1,6 +1,5 @@
 ## README (English)
 
-````markdown
 # OptiTrack Simulink NatNet S-Function
 
 This project provides a C++ S-Function to stream real-time position and orientation data of an OptiTrack rigid body (from Motive) directly into Simulink using the official NatNet SDK.
@@ -30,28 +29,28 @@ This project provides a C++ S-Function to stream real-time position and orientat
 
 ## Build / Compilation
 
-1. Configure MATLAB’s C++ compiler:  
-   ```matlab
+1. Configure MATLAB’s C++ compiler:
+```matlab
    mex -setup C++
 ````
 
 2. Compile the S-Function, pointing to your NatNet SDK paths:
 
-   ```bash
-   mex optitrack_sfunction.cpp \
-     -I"path/to/NatNetSDK/include" \
-     -L"path/to/NatNetSDK/lib/x64" \
-     -lNatNetLib
-   ```
+```bash
+mex optitrack_sfunction.cpp \
+  -I"path/to/NatNetSDK/include" \
+  -L"path/to/NatNetSDK/lib/x64" \
+  -lNatNetLib
+```
 
-   Example (Windows):
+Example (Windows):
 
-   ```bash
-   mex optitrack_sfunction.cpp \
-     -I"C:\NatNetSDK\include" \
-     -L"C:\NatNetSDK\lib\x64" \
-     -lNatNetLib
-   ```
+```bash
+mex optitrack_sfunction.cpp \
+  -I"C:\NatNetSDK\include" \
+  -L"C:\NatNetSDK\lib\x64" \
+  -lNatNetLib
+```
 
 3. Copy `NatNetLib.dll` to your Simulink model folder or another location accessible by MATLAB at runtime.
 
@@ -120,13 +119,12 @@ This project provides a C++ S-Function to stream real-time position and orientat
 * Error handling improvements and reconnection strategies
 * Cross-platform support (e.g. Linux, macOS)
 
-````
+
 
 ---
 
 ## README (Español)
 
-```markdown
 # Función S de OptiTrack para Simulink con NatNet
 
 Este proyecto provee una S-Function en C++ para recibir en tiempo real la posición y orientación de un cuerpo rígido (Rigid Body) de OptiTrack (desde Motive) directamente en Simulink, usando el SDK oficial de NatNet.
@@ -157,27 +155,27 @@ Este proyecto provee una S-Function en C++ para recibir en tiempo real la posici
 ## Compilación
 
 1. Configura el compilador de C++ en MATLAB:  
-   ```matlab
+```matlab
    mex -setup C++
 ````
 
 2. Compila la S-Function, indicando las rutas de tu SDK NatNet:
 
-   ```bash
-   mex optitrack_sfunction.cpp \
-     -I"ruta/a/NatNetSDK/include" \
-     -L"ruta/a/NatNetSDK/lib/x64" \
-     -lNatNetLib
-   ```
+```bash
+mex optitrack_sfunction.cpp \
+  -I"ruta/a/NatNetSDK/include" \
+  -L"ruta/a/NatNetSDK/lib/x64" \
+  -lNatNetLib
+```
 
-   Ejemplo (Windows):
+Ejemplo (Windows):
 
-   ```bash
-   mex optitrack_sfunction.cpp \
-     -I"C:\NatNetSDK\include" \
-     -L"C:\NatNetSDK\lib\x64" \
-     -lNatNetLib
-   ```
+```bash
+mex optitrack_sfunction.cpp \
+  -I"C:\NatNetSDK\include" \
+  -L"C:\NatNetSDK\lib\x64" \
+  -lNatNetLib
+```
 
 3. Copia `NatNetLib.dll` a la carpeta de tu modelo Simulink o a otra ubicación accesible por MATLAB en tiempo de ejecución.
 
@@ -245,5 +243,3 @@ Este proyecto provee una S-Function en C++ para recibir en tiempo real la posici
 * Compatibilidad con modos acelerado o generación de código
 * Mejoras en manejo de errores y estrategias de reconexión
 * Soporte multiplataforma (Linux, macOS)
-::contentReference[oaicite:0]{index=0}
-```
